@@ -28,8 +28,8 @@ export default function Home() {
   });
 
   return (
-    <main className=' w-screen h-screen relative md:max-w-[1400px] mx-auto  '  >
-      <div className=' h-[30vh] w-full md:object-contain pt-4 px-4 ' style={{
+    <main className=' w-screen h-screen relative md:max-w-[1400px] mx-auto overflow-scroll  '  >
+      <div className=' md:h-[30vh] h-[20vh]  w-full md:object-contain pt-4 px-4 ' style={{
         backgroundImage: "url('/hero-image-github-profile.png')", backgroundSize: "cover", backgroundPosition:"center",
         backgroundRepeat: "no-repeat"
       }} >
@@ -37,7 +37,7 @@ export default function Home() {
 
       </div>
 
-      <section className=' md:px-[152px] bg-[#20293A] h-[70vh] relative pt-3 px-4 ' >
+      <section className=' md:px-[152px] bg-[#20293A] md:h-[70vh] h-[80vh] relative pt-3 px-4  z-10 ' >
 
         {isLoading && <p>Loading...</p>}
         {isError && <p>Error loading data</p>}

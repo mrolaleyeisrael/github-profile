@@ -10,7 +10,7 @@ const UserProfile = ({ profileData, isLoadingRepositories, isErrorRepositories, 
         width={50}
         height={50}
         alt='profile image'
-        className='w-24 h-24 rounded-xl -mt-14 absolute bg-[#20293A] p-2'
+        className='w-24 h-24 rounded-xl -mt-14 absolute bg-[#20293A] p-2 z-10'
       />
 
       <div className='flex flex-col md:flex-row md:gap-10 gap-2 pt-10 justify-center'>
@@ -36,7 +36,7 @@ const UserProfile = ({ profileData, isLoadingRepositories, isErrorRepositories, 
       {isLoadingRepositories && <p>Loading repositories...</p>}
       {isErrorRepositories && <p>Error loading repositories</p>}
       {repositories && (
-        <div className='grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-4 mt-5 overflow-scroll ' >
+        <div className='grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-4 mt-5 ' >
           {repositories?.slice(0, 4).map((repo: any) => (
             <RepositoryCard key={repo.id} title={repo.name} description={repo.description} updatedAt={repo.updated_at} url={repo.html_url}  />
           ))}
