@@ -28,16 +28,16 @@ export default function Home() {
   });
 
   return (
-    <main className=' w-screen h-screen relative max-w-[1400px] mx-auto '  >
-      <div className=' h-[30vh] w-full object-contain pt-4 ' style={{
-        backgroundImage: "url('/hero-image-github-profile.png')", backgroundSize: "contain",
+    <main className=' w-screen h-screen relative md:max-w-[1400px] mx-auto  '  >
+      <div className=' h-[30vh] w-full md:object-contain pt-4 px-4 ' style={{
+        backgroundImage: "url('/hero-image-github-profile.png')", backgroundSize: "cover", backgroundPosition:"center",
         backgroundRepeat: "no-repeat"
       }} >
         <SearchBar onSearch={(value:string) => setUsername(value)} />
 
       </div>
 
-      <section className=' px-[152px] bg-[#20293A] h-[70vh] relative pt-3 ' >
+      <section className=' md:px-[152px] bg-[#20293A] h-[70vh] relative pt-3 px-4 ' >
 
         {isLoading && <p>Loading...</p>}
         {isError && <p>Error loading data</p>}

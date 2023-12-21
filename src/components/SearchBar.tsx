@@ -21,7 +21,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   };
 
   return (
-    <form className='pl-4 bg-[#20293A] max-w-md mx-auto flex gap-2 rounded-lg items-center' onSubmit={handleSubmit}>
+    <form className='pl-4 bg-[#20293A] md:max-w-md mx-auto flex gap-2 rounded-lg items-center' onSubmit={handleSubmit}>
       <Image src={searcIcon} alt='search icon' className='flex-grow-0 shrink-0 h-5 w-5' />
       <input
         type="text"
